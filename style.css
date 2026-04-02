@@ -1,64 +1,64 @@
 /* Reset */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; line-height:1.6; color:#333; background:#f4f4f4; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:#000; background:#fff; }
 
 /* Container */
 .container { max-width:1200px; margin:auto; padding:0 20px; position:relative; }
 
 /* Header */
-header { background:#007BFF; color:#fff; padding:20px 0; position:relative; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:10; }
+header { background:#000; color:#fff; padding:20px 0; position:relative; }
 header .logo { font-weight:bold; font-size:24px; }
 nav ul { list-style:none; display:flex; gap:20px; }
 nav ul li { position:relative; }
 nav ul li a { text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
-nav ul li a:hover { color:#ffd700; }
-nav ul li .mega-menu { display:none; position:absolute; top:100%; left:0; background:#fff; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.15); color:#333; }
+nav ul li a:hover { color:#FFD700; }
+nav ul li .mega-menu { display:none; position:absolute; top:100%; left:0; background:#fff; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.15); color:#000; }
 nav ul li:hover .mega-menu { display:flex; }
-.mega-column a { display:block; margin:5px 0; color:#333; text-decoration:none; }
-.mega-column a:hover { color:#007BFF; }
+.mega-column a { display:block; margin:5px 0; color:#000; text-decoration:none; }
+.mega-column a:hover { color:#FFD700; }
 
 /* Language Switcher */
 .language-switcher { position:absolute; top:20px; right:20px; display:flex; gap:8px; z-index:20; }
-.lang-btn { font-size:20px; padding:6px 10px; border:2px solid #fff; border-radius:50%; background:#007BFF; color:#fff; cursor:pointer; transition:0.3s; }
-.lang-btn:hover { transform:scale(1.2); border-color:#ffd700; }
-.lang-btn.active { border-color:#ffd700; box-shadow:0 0 5px #ffd700; }
+.lang-btn { font-size:18px; padding:8px 12px; border:none; border-radius:50%; background:#FFD700; color:#000; cursor:pointer; transition:0.3s; font-weight:bold; }
+.lang-btn:hover { transform:scale(1.2); }
+.lang-btn.active { box-shadow:0 0 5px #FFD700; }
 
 /* Hero Section */
-.hero { text-align:center; padding:100px 20px; background:#e0f7fa; color:#007BFF; }
+.hero { text-align:center; padding:100px 20px; background:#FFD700; color:#000; }
 .hero h1 { font-size:42px; margin-bottom:15px; }
 .hero p { font-size:20px; margin-bottom:25px; }
-.hero .btn { display:inline-block; padding:14px 28px; background:#007BFF; color:#fff; border-radius:6px; text-decoration:none; transition:0.3s; font-weight:bold; }
-.hero .btn:hover { background:#0056b3; }
+.hero .btn { display:inline-block; padding:14px 28px; background:#000; color:#FFD700; border-radius:50px; text-decoration:none; transition:0.3s; font-weight:bold; }
+.hero .btn:hover { background:#333; }
 
 /* Services */
-.services { padding:60px 20px; text-align:center; background:#f1f8e9; }
+.services { padding:60px 20px; text-align:center; background:#FFF8DC; }
 .service-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.card { background:#fff; padding:25px; border-radius:10px; flex:1 1 250px; box-shadow:0 2px 12px rgba(0,0,0,0.1); transition:0.3s; }
-.card:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.card { background:#000; color:#FFD700; padding:25px; border-radius:12px; flex:1 1 250px; box-shadow:0 2px 12px rgba(0,0,0,0.2); transition:0.3s; }
+.card:hover { transform:translateY(-5px); }
 
 /* Pricing */
-.pricing { padding:60px 20px; background:#fff; }
-.price-card { background:#f9f9f9; padding:25px; border-radius:10px; flex:1 1 250px; box-shadow:0 2px 12px rgba(0,0,0,0.1); transition:0.3s; }
-.price-card:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.pricing { padding:60px 20px; background:#FFD700; color:#000; }
+.price-card { background:#000; color:#FFD700; padding:25px; border-radius:12px; flex:1 1 250px; box-shadow:0 2px 12px rgba(0,0,0,0.2); transition:0.3s; }
+.price-card:hover { transform:translateY(-5px); }
 .price-card h1 { font-size:36px; margin:10px 0; }
-.price-card button { padding:12px 25px; background:#007BFF; border:none; color:#fff; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.3s; }
-.price-card button:hover { background:#0056b3; }
+.price-card button { padding:12px 25px; background:#FFD700; border:none; color:#000; border-radius:50px; cursor:pointer; font-weight:bold; transition:0.3s; }
+.price-card button:hover { background:#FFC107; }
 
 /* Testimonials */
-.testimonials { padding:60px 20px; background:#f0f4c3; }
+.testimonials { padding:60px 20px; background:#FFFACD; color:#000; }
 .testimonial-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.testimonial { background:#fff; padding:25px; border-radius:10px; flex:1 1 300px; box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+.testimonial { background:#000; color:#FFD700; padding:25px; border-radius:12px; flex:1 1 300px; box-shadow:0 2px 12px rgba(0,0,0,0.2); }
 
 /* Contact */
-.contact { padding:60px 20px; background:#fff; }
+.contact { padding:60px 20px; background:#000; color:#FFD700; }
 .contact form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto; }
-.contact input, .contact textarea { padding:12px; border:1px solid #ccc; border-radius:6px; font-size:16px; }
-.contact button { padding:12px; background:#007BFF; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.3s; }
-.contact button:hover { background:#0056b3; }
+.contact input, .contact textarea { padding:12px; border:1px solid #FFD700; border-radius:50px; background:#000; color:#FFD700; }
+.contact button { padding:12px; background:#FFD700; color:#000; border:none; border-radius:50px; cursor:pointer; font-weight:bold; transition:0.3s; }
+.contact button:hover { background:#FFC107; }
 
 /* Footer */
-footer { background:#222; color:#fff; padding:40px 20px; }
-footer a { color:#fff; text-decoration:none; display:block; margin:4px 0; }
+footer { background:#000; color:#FFD700; padding:40px 20px; }
+footer a { color:#FFD700; text-decoration:none; display:block; margin:4px 0; }
 footer a:hover { text-decoration:underline; }
 footer .footer-container { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 footer .footer-col { min-width:200px; }
