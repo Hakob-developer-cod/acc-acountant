@@ -5,227 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackLedger | Accounting & Business Services</title>
 <link rel="stylesheet" href="style.css">
-</head>
 
+<style>
+/* Language selector style */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.language-selector select {
+  padding: 8px;
+  font-size: 16px;
+}
+</style>
+
+</head>
 <body>
 
+<!-- Language Selector -->
+<div class="language-selector">
+  <select id="languageSelect">
+    <option value="en">🇬🇧 English</option>
+    <option value="am">🇦🇲 Հայերեն</option>
+    <option value="ru">🇷🇺 Русский</option>
+  </select>
+</div>
+
 <header>
-
 <div class="container">
-
-<div class="logo">BlackLedger</div>
-
-<nav>
-
-<ul class="menu">
-
-<li><a href="#">Home</a></li>
-
-<li class="dropdown">
-
-<a href="#">Services ▾</a>
-
-<div class="mega-menu">
-
-<div class="mega-column">
-
-<a href="#">Հաշվապահական և հարկային սպասարկում</a>
-
-<a href="#">Ֆինանսական կառավարում և վերահսկողություն</a>
-
-<a href="#">Իրավական և կադրային ուղեկցում</a>
-
-<a href="#">Դատամատրիքս և թվային լուծումներ</a>
-
-<a href="#">Բիզնեսի զարգացում և միջազգային աջակցություն</a>
-
+  <div class="logo" data-key="logo">BlackLedger</div>
+  <nav>
+    <ul class="menu">
+      <li><a href="#" data-key="menu_home">Home</a></li>
+      <li class="dropdown">
+        <a href="#" data-key="menu_services">Services ▾</a>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <a href="#" data-key="service_1">Հաշվապահական և հարկային սպասարկում</a>
+            <a href="#" data-key="service_2">Ֆինանսական կառավարում և վերահսկողություն</a>
+            <a href="#" data-key="service_3">Իրավական և կադրային ուղեկցում</a>
+            <a href="#" data-key="service_4">Դատամատրիքս և թվային լուծումներ</a>
+            <a href="#" data-key="service_5">Բիզնեսի զարգացում և միջազգային աջակցություն</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="#pricing" data-key="menu_pricing">Pricing</a></li>
+      <li><a href="#contact" data-key="menu_contact">Contact</a></li>
+    </ul>
+  </nav>
 </div>
-
-</div>
-
-</li>
-
-<li><a href="#pricing">Pricing</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
 </header>
 
-
 <section class="hero">
-
-<h1>Accounting & Business Solutions</h1>
-
-<p>Professional financial support for modern businesses</p>
-
-<a href="#contact" class="btn">Get Free Consultation</a>
-
+<h1 data-key="hero_title">Accounting & Business Solutions</h1>
+<p data-key="hero_desc">Professional financial support for modern businesses</p>
+<a href="#contact" class="btn" data-key="hero_btn">Get Free Consultation</a>
 </section>
-
 
 <section class="services">
-
-<h2>Our Services</h2>
-
+<h2 data-key="services_title">Our Services</h2>
 <div class="service-container">
-
-<div class="card">
-<h3>Accounting</h3>
-<p>Full accounting support and financial reporting.</p>
+  <div class="card">
+    <h3 data-key="card1_title">Accounting</h3>
+    <p data-key="card1_desc">Full accounting support and financial reporting.</p>
+  </div>
+  <div class="card">
+    <h3 data-key="card2_title">Tax Consulting</h3>
+    <p data-key="card2_desc">Tax planning and compliance services.</p>
+  </div>
+  <div class="card">
+    <h3 data-key="card3_title">Business Consulting</h3>
+    <p data-key="card3_desc">Strategic advice for growing companies.</p>
+  </div>
 </div>
-
-<div class="card">
-<h3>Tax Consulting</h3>
-<p>Tax planning and compliance services.</p>
-</div>
-
-<div class="card">
-<h3>Business Consulting</h3>
-<p>Strategic advice for growing companies.</p>
-</div>
-
-</div>
-
 </section>
-
 
 <section id="pricing" class="pricing">
-
-<h2>Pricing Plans</h2>
-
+<h2 data-key="pricing_title">Pricing Plans</h2>
 <div class="pricing-container">
-
-<div class="price-card">
-
-<h3>Starter</h3>
-
-<h1>$99</h1>
-
-<p>Basic accounting support</p>
-
-<button>Choose Plan</button>
-
+  <div class="price-card">
+    <h3 data-key="starter_title">Starter</h3>
+    <h1>$99</h1>
+    <p data-key="starter_desc">Basic accounting support</p>
+    <button data-key="choose_plan">Choose Plan</button>
+  </div>
+  <div class="price-card">
+    <h3 data-key="business_title">Business</h3>
+    <h1>$199</h1>
+    <p data-key="business_desc">Accounting + tax consulting</p>
+    <button data-key="choose_plan">Choose Plan</button>
+  </div>
+  <div class="price-card">
+    <h3 data-key="premium_title">Premium</h3>
+    <h1>$399</h1>
+    <p data-key="premium_desc">Full financial management</p>
+    <button data-key="choose_plan">Choose Plan</button>
+  </div>
 </div>
-
-<div class="price-card">
-
-<h3>Business</h3>
-
-<h1>$199</h1>
-
-<p>Accounting + tax consulting</p>
-
-<button>Choose Plan</button>
-
-</div>
-
-<div class="price-card">
-
-<h3>Premium</h3>
-
-<h1>$399</h1>
-
-<p>Full financial management</p>
-
-<button>Choose Plan</button>
-
-</div>
-
-</div>
-
 </section>
-
 
 <section class="testimonials">
-
-<h2>Client Reviews</h2>
-
+<h2 data-key="testimonials_title">Client Reviews</h2>
 <div class="testimonial-container">
-
-<div class="testimonial">
-<p>"Great accounting support for our company."</p>
-<h4>Anna S.</h4>
+  <div class="testimonial">
+    <p data-key="testimonial1">"Great accounting support for our company."</p>
+    <h4 data-key="testimonial1_name">Anna S.</h4>
+  </div>
+  <div class="testimonial">
+    <p data-key="testimonial2">"Professional and reliable financial team."</p>
+    <h4 data-key="testimonial2_name">David K.</h4>
+  </div>
 </div>
-
-<div class="testimonial">
-<p>"Professional and reliable financial team."</p>
-<h4>David K.</h4>
-</div>
-
-</div>
-
 </section>
-
 
 <section id="contact" class="contact">
-
-<h2>Contact Us</h2>
-
+<h2 data-key="contact_title">Contact Us</h2>
 <form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
+  <input type="text" placeholder="Your Name" data-key-placeholder="contact_name">
+  <input type="email" placeholder="Email" data-key-placeholder="contact_email">
+  <textarea placeholder="Your Message" data-key-placeholder="contact_message"></textarea>
+  <button type="submit" data-key="contact_btn">Send Message</button>
 </form>
-
 </section>
 
-
 <footer>
-
 <div class="footer-container">
-
-<div class="footer-col">
-
-<h3>Company</h3>
-
-<a href="#">About</a>
-
-<a href="#">Team</a>
-
-<a href="#">Careers</a>
-
+  <div class="footer-col">
+    <h3 data-key="footer_company">Company</h3>
+    <a href="#" data-key="footer_about">About</a>
+    <a href="#" data-key="footer_team">Team</a>
+    <a href="#" data-key="footer_careers">Careers</a>
+  </div>
+  <div class="footer-col">
+    <h3 data-key="footer_services">Services</h3>
+    <a href="#" data-key="footer_accounting">Accounting</a>
+    <a href="#" data-key="footer_tax">Tax Consulting</a>
+    <a href="#" data-key="footer_business">Business Support</a>
+  </div>
+  <div class="footer-col">
+    <h3 data-key="footer_contact">Contact</h3>
+    <p data-key="footer_email">Email: info@blackledger.com</p>
+    <p data-key="footer_phone">Phone: +37400000000</p>
+  </div>
 </div>
-
-<div class="footer-col">
-
-<h3>Services</h3>
-
-<a href="#">Accounting</a>
-
-<a href="#">Tax Consulting</a>
-
-<a href="#">Business Support</a>
-
-</div>
-
-<div class="footer-col">
-
-<h3>Contact</h3>
-
-<p>Email: info@blackledger.com</p>
-
-<p>Phone: +37400000000</p>
-
-</div>
-
-</div>
-
 <p class="copyright">© 2026 BlackLedger</p>
-
 </footer>
 
-</body>
+<script src="translations.js"></script>
+<script src="language.js"></script>
 
+</body>
 </html>
