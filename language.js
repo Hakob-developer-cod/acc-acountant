@@ -1,36 +1,35 @@
-const langButtons = document.querySelectorAll(".lang-btn");
+const langButtons = document.querySelectorAll('.lang-btn');
 
-function setLanguage(language){
-  localStorage.setItem("language", language);
-
-  // Text content
-  document.querySelectorAll("[data-key]").forEach(el=>{
-    const key = el.getAttribute("data-key");
-    if(translations[language][key]){
-      el.textContent = translations[language][key];
+function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-key]');
+  const placeholders = document.querySelectorAll('[data-key-placeholder]');
+  
+  elements.forEach(el => {
+    const key = el.getAttribute('data-key');
+    if(translations[lang][key]) {
+      el.textContent = translations[lang][key];
     }
   });
 
-  // Placeholders
-  document.querySelectorAll("[data-key-placeholder]").forEach(el=>{
-    const key = el.getAttribute("data-key-placeholder");
-    if(translations[language][key]){
-      el.placeholder = translations[language][key];
+  placeholders.forEach(el => {
+    const key = el.getAttribute('data-key-placeholder');
+    if(translations[lang][key]) {
+      el.placeholder = translations[lang][key];
     }
   });
 
-  // Update active class
-  langButtons.forEach(btn => btn.classList.remove("active"));
-  document.querySelector(`.lang-btn[data-lang="${language}"]`).classList.add("active");
+  // Highlight active button
+  langButtons.forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
 }
 
-// Add click event
-langButtons.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    setLanguage(btn.dataset.lang);
+// Default language
+setLanguage('en');
+
+// Add click events
+langButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const selectedLang = btn.getAttribute('data-lang');
+    setLanguage(selectedLang);
   });
 });
-
-// Load saved language or default
-const savedLanguage = localStorage.getItem("language") || "en";
-setLanguage(savedLanguage);
